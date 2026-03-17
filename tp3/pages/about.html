@@ -1,53 +1,357 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>About</title>
-<link rel="stylesheet" href="../css/style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À Propos – NovaBuild</title>
+  <meta name="description" content="Découvrez l'histoire, les valeurs et l'équipe de NovaBuild, leader de l'architecture et du design d'intérieur à Casablanca." />
+  <meta name="keywords" content="NovaBuild équipe, architectes Casablanca, histoire NovaBuild" />
+  <meta name="author" content="NovaBuild" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="À Propos – NovaBuild" />
+  <meta property="og:description" content="Rencontrez l'équipe passionnée derrière NovaBuild, pionnière de l'architecture moderne au Maroc." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://novabuild.ma/pages/about.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="NovaBuild" />
+
+  <link rel="canonical" href="https://novabuild.ma/pages/about.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
 <body>
 
-<header>
-<nav>
-  <ul>
-    <li><a href="../index.html">Accueil</a></li>
-    <li><a href="about.html">À propos</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="gallery.html">Galerie</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-</header>
+  <header>
+    <div class="navbar">
+      <a href="../index.html" class="logo">Nova<span>Build</span></a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="about.html" class="active">À Propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section>
-  <h2>Notre équipe</h2>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>À Propos de NovaBuild</h1>
+      <p>Notre histoire, nos valeurs et l'équipe qui fait la différence</p>
+      <div class="breadcrumb">
+        <a href="../index.html">Accueil</a> <span> / À Propos</span>
+      </div>
+    </div>
+  </section>
 
-  <div class="cards">
-    <figure class="card">
-      <img src="../images/team1.png" height="200px">
-      <figcaption>Yassine - Dev</figcaption>
-    </figure>
+  <!-- NOTRE HISTOIRE -->
+  <section class="section">
+    <div class="container">
+      <div class="about-intro">
+        <div>
+          <span class="badge badge-gold mb-2">Depuis 2010</span>
+          <h2>Notre Histoire</h2>
+          <p>NovaBuild a été fondée en 2010 par Mehdi Fassi et Sara Idrissi, deux architectes diplômés de l'École Nationale d'Architecture de Rabat et formés respectivement à Paris et Barcelone. Leur vision commune : apporter un regard neuf et international à l'architecture marocaine.</p>
+          <p>En quinze ans, nous avons grandi d'une équipe de 3 personnes à une agence de 48 experts couvrant l'architecture, le design d'intérieur, le paysagisme et la gestion de projet.</p>
+          <p>Aujourd'hui, NovaBuild est reconnue comme l'une des agences les plus innovantes du Maghreb, avec plus de 350 projets livrés au Maroc et en Afrique de l'Ouest.</p>
+        </div>
+        <div>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800 800w,
+                      https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600 600w"
+              sizes="(max-width: 1024px) 600px, 800px"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500"
+              alt="L'équipe NovaBuild dans les bureaux de Casablanca"
+              style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <figure class="card">
-      <img src="../images/team2.jpg">
-      <figcaption>Sara - Designer</figcaption>
-    </figure>
-  </div>
-</section>
+  <!-- VALEURS -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nos Valeurs</h2>
+        <p>Les principes qui guident chaque décision et chaque projet.</p>
+      </div>
+      <div class="grid-3">
+        <div class="service-card">
+          <span class="icon">🎯</span>
+          <h3>Excellence</h3>
+          <p>Nous refusons la médiocrité. Chaque détail compte, du premier croquis à la touche finale de chantier.</p>
+          <ul class="values-list">
+            <li>Standards internationaux</li>
+            <li>Matériaux de haute qualité</li>
+            <li>Finitions impeccables</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <span class="icon">🌍</span>
+          <h3>Durabilité</h3>
+          <p>Nous concevons des bâtiments respectueux de l'environnement qui minimisent leur empreinte écologique.</p>
+          <ul class="values-list">
+            <li>Conception bioclimatique</li>
+            <li>Énergies renouvelables</li>
+            <li>Certification HQE</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <span class="icon">🤝</span>
+          <h3>Collaboration</h3>
+          <p>Votre projet est notre projet. Nous vous impliquons à chaque étape pour garantir un résultat à votre image.</p>
+          <ul class="values-list">
+            <li>Écoute active</li>
+            <li>Transparence totale</li>
+            <li>Suivi personnalisé</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 NovaTech</p>
+  <!-- ÉQUIPE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Notre Équipe Dirigeante</h2>
+        <p>Des professionnels passionnés avec une expertise internationale.</p>
+      </div>
+      <div class="grid-4">
 
-  <p>
-    <a href="../index.html">Accueil</a> |
-    <a href="about.html">À propos</a> |
-    <a href="services.html">Services</a> |
-    <a href="contact.html">Contact</a>
-  </p>
+        <div class="team-card">
+          <figure>
+            <picture>
+              <source
+                srcset="https://i.pravatar.cc/200?img=11 200w,
+                        https://i.pravatar.cc/150?img=11 150w"
+                sizes="200px"
+              />
+              <img src="https://i.pravatar.cc/200?img=11" alt="Mehdi Fassi, Co-fondateur & Directeur Général" />
+            </picture>
+            <figcaption>
+              <h3>Mehdi Fassi</h3>
+              <p class="role">Co-fondateur & DG</p>
+              <p>Architecte DPLG, ancien de l'École Spéciale d'Architecture de Paris. 20 ans d'expérience en architecture durable.</p>
+            </figcaption>
+          </figure>
+        </div>
 
-  <p>Mentions légales</p>
-</footer>
+        <div class="team-card">
+          <figure>
+            <picture>
+              <source
+                srcset="https://i.pravatar.cc/200?img=47 200w,
+                        https://i.pravatar.cc/150?img=47 150w"
+                sizes="200px"
+              />
+              <img src="https://i.pravatar.cc/200?img=47" alt="Sara Idrissi, Co-fondatrice & Directrice Design" />
+            </picture>
+            <figcaption>
+              <h3>Sara Idrissi</h3>
+              <p class="role">Co-fondatrice & Dir. Design</p>
+              <p>Diplômée de l'ELISAVA Barcelone. Spécialiste du design biophilique et des espaces de bien-être.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="team-card">
+          <figure>
+            <picture>
+              <source
+                srcset="https://i.pravatar.cc/200?img=68 200w,
+                        https://i.pravatar.cc/150?img=68 150w"
+                sizes="200px"
+              />
+              <img src="https://i.pravatar.cc/200?img=68" alt="Youssef Tahir, Directeur Technique" />
+            </picture>
+            <figcaption>
+              <h3>Youssef Tahir</h3>
+              <p class="role">Directeur Technique</p>
+              <p>Ingénieur en génie civil, expert en structures et certifications environnementales HQE et LEED.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="team-card">
+          <figure>
+            <picture>
+              <source
+                srcset="https://i.pravatar.cc/200?img=44 200w,
+                        https://i.pravatar.cc/150?img=44 150w"
+                sizes="200px"
+              />
+              <img src="https://i.pravatar.cc/200?img=44" alt="Layla Moussaoui, Directrice des Projets" />
+            </picture>
+            <figcaption>
+              <h3>Layla Moussaoui</h3>
+              <p class="role">Directrice Projets</p>
+              <p>MBA en gestion de projets, 12 ans d'expérience dans la coordination de chantiers complexes au Maroc et à l'étranger.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="team-card">
+          <figure>
+            <picture>
+              <source
+                srcset="https://i.pravatar.cc/200?img=52 200w,
+                        https://i.pravatar.cc/150?img=52 150w"
+                sizes="200px"
+              />
+              <img src="https://i.pravatar.cc/200?img=52" alt="Omar Benkirane, Architecte Senior" />
+            </picture>
+            <figcaption>
+              <h3>Omar Benkirane</h3>
+              <p class="role">Architecte Senior</p>
+              <p>Spécialiste des projets hôteliers et du tourisme de luxe. Lauréat du Prix Maghreb d'Architecture 2022.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="team-card">
+          <figure>
+            <picture>
+              <source
+                srcset="https://i.pravatar.cc/200?img=39 200w,
+                        https://i.pravatar.cc/150?img=39 150w"
+                sizes="200px"
+              />
+              <img src="https://i.pravatar.cc/200?img=39" alt="Amina Rifai, Designer d'Intérieur" />
+            </picture>
+            <figcaption>
+              <h3>Amina Rifai</h3>
+              <p class="role">Designer d'Intérieur</p>
+              <p>Formée à Milan, experte en mobilier sur mesure et en intégration de l'artisanat marocain dans le design contemporain.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="team-card">
+          <figure>
+            <picture>
+              <source
+                srcset="https://i.pravatar.cc/200?img=60 200w,
+                        https://i.pravatar.cc/150?img=60 150w"
+                sizes="200px"
+              />
+              <img src="https://i.pravatar.cc/200?img=60" alt="Karim Berrada, Paysagiste" />
+            </picture>
+            <figcaption>
+              <h3>Karim Berrada</h3>
+              <p class="role">Paysagiste</p>
+              <p>Ingénieur paysagiste, passionné par les jardins méditerranéens et les toits végétalisés en milieu urbain.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="team-card">
+          <figure>
+            <picture>
+              <source
+                srcset="https://i.pravatar.cc/200?img=32 200w,
+                        https://i.pravatar.cc/150?img=32 150w"
+                sizes="200px"
+              />
+              <img src="https://i.pravatar.cc/200?img=32" alt="Hind Ziani, Responsable Communication" />
+            </picture>
+            <figcaption>
+              <h3>Hind Ziani</h3>
+              <p class="role">Responsable Communication</p>
+              <p>Experte en communication visuelle et brand management. Elle porte la vision NovaBuild vers le grand public.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIFFRES CLÉS -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="grid-4">
+        <div class="stat-item">
+          <div class="stat-number">350+</div>
+          <div class="stat-label">Projets Livrés</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Pays d'Intervention</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">48</div>
+          <div class="stat-label">Collaborateurs</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Clients Satisfaits</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">Nova<span>Build</span></a>
+          <p>Leader de l'architecture et du design d'intérieur au Maroc depuis 2010.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">li</a>
+            <a href="#" class="social-link">yt</a>
+          </div>
+        </div>
+        <div>
+          <h4>Plan du Site</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Architecture</a></li>
+            <li><a href="services.html">Design d'Intérieur</a></li>
+            <li><a href="services.html">Rénovation</a></li>
+            <li><a href="services.html">Paysagisme</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>📍 123 Bd Zerktouni, Casablanca</li>
+            <li>📞 +212 522 456 789</li>
+            <li>✉️ contact@novabuild.ma</li>
+            <li>🕐 Lun–Ven : 9h–18h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NovaBuild SARL. Tous droits réservés. |
+        <a href="#">Mentions Légales</a> |
+        <a href="#">Politique de Confidentialité</a>
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>

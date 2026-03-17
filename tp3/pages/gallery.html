@@ -1,57 +1,421 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Galerie</title>
-<link rel="stylesheet" href="../css/style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie – NovaBuild</title>
+  <meta name="description" content="Explorez notre galerie de projets : villas, bureaux, restaurants et espaces de design intérieur réalisés par NovaBuild à Casablanca et au Maroc." />
+  <meta name="keywords" content="galerie architecture Casablanca, projets design intérieur Maroc, réalisations NovaBuild" />
+  <meta name="author" content="NovaBuild" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Galerie – NovaBuild" />
+  <meta property="og:description" content="Découvrez nos réalisations en architecture et design d'intérieur à Casablanca et au Maroc." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://novabuild.ma/pages/gallery.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="NovaBuild" />
+
+  <link rel="canonical" href="https://novabuild.ma/pages/gallery.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 8px 22px;
+      border: 2px solid var(--border);
+      border-radius: 30px;
+      cursor: pointer;
+      background: white;
+      font-size: 0.9rem;
+      font-family: var(--font-body);
+      transition: var(--transition);
+      color: var(--primary);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+    .gallery-item figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,26,46,0.9));
+      color: white;
+      padding: 30px 15px 15px;
+      transform: translateY(100%);
+      transition: var(--transition);
+    }
+    .gallery-item:hover figcaption {
+      transform: translateY(0);
+    }
+    .gallery-item figure {
+      margin: 0;
+      height: 100%;
+      position: relative;
+    }
+    .gallery-item figcaption h4 {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+    .gallery-item figcaption p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+      margin: 0;
+    }
+  </style>
+</head>
 <body>
 
-<header>
-<nav>
-  <ul>
-    <li><a href="../index.html">Accueil</a></li>
-    <li><a href="about.html">À propos</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="gallery.html">Galerie</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-</header>
+  <header>
+    <div class="navbar">
+      <a href="../index.html" class="logo">Nova<span>Build</span></a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html" class="active">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section>
-  <h2>Galerie</h2>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Notre Galerie</h1>
+      <p>350+ projets réalisés à travers le Maroc et l'Afrique</p>
+      <div class="breadcrumb">
+        <a href="../index.html">Accueil</a> <span> / Galerie</span>
+      </div>
+    </div>
+  </section>
 
-  <div class="cards">
-<picture>
-  <source media="(max-width:600px)" srcset="../images/img1-small.jpg">
-  <img src="../images/img1.jpg" alt="Projet">
-</picture>
-<picture>
-  <source media="(max-width:600px)" srcset="../images/img2-small.webp">
-  <img src="../images/img2.webp" alt="Projet">
-</picture>
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="container">
 
-    <picture>
-      <source media="(max-width:600px)" srcset="../images/img3-small.jpg">
-      <img src="../images/img3.jpg" alt="Projet">
-    </picture>
-  </div>
-</section>
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active">Tous</button>
+        <button class="filter-btn">Résidentiel</button>
+        <button class="filter-btn">Commercial</button>
+        <button class="filter-btn">Intérieur</button>
+        <button class="filter-btn">Paysagisme</button>
+      </div>
 
-<footer>
-  <p>© 2026 NovaTech</p>
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
 
-  <p>
-    <a href="../index.html">Accueil</a> |
-    <a href="about.html">À propos</a> |
-    <a href="services.html">Services</a> |
-    <a href="contact.html">Contact</a>
-  </p>
+        <!-- Item 1 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700 700w,
+                        https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400"
+                alt="Villa Aïn Diab – Façade contemporaine"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Villa Aïn Diab</h4>
+              <p>Résidentiel · Casablanca</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
 
-  <p>Mentions légales</p>
-</footer>
+        <!-- Item 2 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700 700w,
+                        https://images.unsplash.com/photo-1497366216548-37526070297c?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400"
+                alt="Tour CFC – Bureau classe A"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Tour CFC</h4>
+              <p>Commercial · Casablanca Finance City</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700 700w,
+                        https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400"
+                alt="Cuisine moderne rénovée"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Résidence Palmier</h4>
+              <p>Intérieur · Cuisine sur mesure</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1571624436279-b272aff752b5?w=700 700w,
+                        https://images.unsplash.com/photo-1571624436279-b272aff752b5?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?w=400"
+                alt="Restaurant El Azrak – Design intérieur"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Restaurant El Azrak</h4>
+              <p>Commercial · Gastronomie</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=700 700w,
+                        https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=400"
+                alt="Jardin tropical privé"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Jardin Villa Océan</h4>
+              <p>Paysagisme · Bouskoura</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700 700w,
+                        https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400"
+                alt="Appartement moderne rénové"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Appartement Maarif</h4>
+              <p>Résidentiel · Rénovation complète</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700 700w,
+                        https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400"
+                alt="Salon contemporain haut standing"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Penthouse Anfa</h4>
+              <p>Intérieur · Salon de luxe</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=700 700w,
+                        https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400"
+                alt="Hôtel Perle Bleue – Hall d'entrée"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Hôtel Perle Bleue</h4>
+              <p>Commercial · Hôtellerie</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="gallery-item">
+          <figure>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700 700w,
+                        https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500 500w"
+                sizes="(max-width: 1024px) 500px, 700px"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400"
+                alt="Espace de coworking moderne"
+                style="width:100%;height:250px;object-fit:cover;display:block;"
+              />
+            </picture>
+            <figcaption>
+              <h4>Hub Nova Casa</h4>
+              <p>Commercial · Coworking</p>
+            </figcaption>
+            <div class="gallery-overlay"><span>🔍</span></div>
+          </figure>
+        </div>
+
+      </div><!-- end gallery-grid -->
+    </div>
+  </section>
+
+  <!-- VIDÉO DE PRÉSENTATION -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>NovaBuild en Vidéo</h2>
+        <p>Découvrez notre processus de travail et nos équipes en action.</p>
+      </div>
+      <div style="max-width:800px; margin:0 auto; border-radius:8px; overflow:hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          style="width:100%; display:block;"
+        >
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture vidéo HTML5.
+        </video>
+      </div>
+      <p class="text-center mt-2 text-gray" style="font-size:0.9rem;">
+        Vidéo de présentation – Processus de conception NovaBuild
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">Nova<span>Build</span></a>
+          <p>Leader de l'architecture et du design d'intérieur au Maroc depuis 2010.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">li</a>
+            <a href="#" class="social-link">yt</a>
+          </div>
+        </div>
+        <div>
+          <h4>Plan du Site</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Architecture</a></li>
+            <li><a href="services.html">Design d'Intérieur</a></li>
+            <li><a href="services.html">Rénovation</a></li>
+            <li><a href="services.html">Paysagisme</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>📍 123 Bd Zerktouni, Casablanca</li>
+            <li>📞 +212 522 456 789</li>
+            <li>✉️ contact@novabuild.ma</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NovaBuild SARL. Tous droits réservés. |
+        <a href="#">Mentions Légales</a> |
+        <a href="#">Politique de Confidentialité</a>
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>

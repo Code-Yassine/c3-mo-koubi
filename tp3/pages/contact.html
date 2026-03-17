@@ -1,69 +1,429 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Contact</title>
-<link rel="stylesheet" href="../css/style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – NovaBuild</title>
+  <meta name="description" content="Contactez NovaBuild pour votre projet d'architecture ou de design d'intérieur à Casablanca. Devis gratuit et sans engagement." />
+  <meta name="keywords" content="contact NovaBuild, devis architecture Casablanca, contact designer intérieur Maroc" />
+  <meta name="author" content="NovaBuild" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contactez NovaBuild" />
+  <meta property="og:description" content="Obtenez un devis gratuit pour votre projet d'architecture ou de design. Notre équipe vous répond sous 24h." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://novabuild.ma/pages/contact.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="NovaBuild" />
+
+  <link rel="canonical" href="https://novabuild.ma/pages/contact.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
 <body>
 
-<header>
-<nav>
-  <ul>
-    <li><a href="../index.html">Accueil</a></li>
-    <li><a href="about.html">À propos</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="gallery.html">Galerie</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-</header>
+  <header>
+    <div class="navbar">
+      <a href="../index.html" class="logo">Nova<span>Build</span></a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section>
-  <h2>Contact</h2>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contactez-Nous</h1>
+      <p>Notre équipe répond à toutes vos demandes sous 24 heures ouvrées</p>
+      <div class="breadcrumb">
+        <a href="../index.html">Accueil</a> <span> / Contact</span>
+      </div>
+    </div>
+  </section>
 
-<form>
-  <input type="text" placeholder="Nom" required>
-  <input type="email" placeholder="Email" required>
-  <input type="tel" placeholder="Téléphone">
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
 
-  <input type="date">
+        <!-- FORMULAIRE -->
+        <div class="contact-form-wrapper">
+          <h2>Envoyez-Nous un Message</h2>
+          <p class="text-gray mb-2">Remplissez ce formulaire et nous vous recontacterons rapidement.</p>
 
-  <select>
-    <option>Service demandé</option>
-    <option>Web</option>
-    <option>SEO</option>
-  </select>
+          <form action="#" method="POST" novalidate>
 
-  <textarea placeholder="Message"></textarea>
+            <!-- Nom & Prénom -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom *</label>
+                <input
+                  type="text"
+                  id="prenom"
+                  name="prenom"
+                  placeholder="Votre prénom"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  autocomplete="given-name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom *</label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Votre nom de famille"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  autocomplete="family-name"
+                />
+              </div>
+            </div>
 
-  <input type="file">
+            <!-- Email & Téléphone -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="exemple@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  placeholder="+212 6XX XXX XXX"
+                  pattern="[+0-9\s\-]+"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
 
-  <label>
-    <input type="checkbox" required> J'accepte les conditions
-  </label>
+            <!-- Entreprise -->
+            <div class="form-group">
+              <label for="entreprise">Société / Entreprise</label>
+              <input
+                type="text"
+                id="entreprise"
+                name="entreprise"
+                placeholder="Nom de votre entreprise (optionnel)"
+                autocomplete="organization"
+              />
+            </div>
 
-  <button>Envoyer</button>
-</form>
+            <!-- Type de projet (select) -->
+            <div class="form-group">
+              <label for="type-projet">Type de Projet *</label>
+              <select id="type-projet" name="type_projet" required>
+                <option value="" disabled selected>-- Sélectionnez un service --</option>
+                <option value="architecture">Architecture Neuve</option>
+                <option value="design-interieur">Design d'Intérieur</option>
+                <option value="renovation">Rénovation</option>
+                <option value="paysagisme">Paysagisme</option>
+                <option value="consultation">Consultation / Expertise</option>
+                <option value="commercial">Projet Commercial</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
 
-  <iframe 
-    src="https://maps.google.com/maps?q=casablanca&t=&z=13&ie=UTF8&iwloc=&output=embed"
-    width="100%" height="300">
-  </iframe>
-</section>
+            <!-- Budget -->
+            <div class="form-group">
+              <label for="budget">Budget Estimatif</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>-- Votre budget approximatif --</option>
+                <option value="moins-100k">Moins de 100 000 MAD</option>
+                <option value="100k-500k">100 000 – 500 000 MAD</option>
+                <option value="500k-1m">500 000 – 1 000 000 MAD</option>
+                <option value="1m-5m">1 000 000 – 5 000 000 MAD</option>
+                <option value="plus-5m">Plus de 5 000 000 MAD</option>
+                <option value="indefini">Non défini</option>
+              </select>
+            </div>
 
-<footer>
-  <p>© 2026 NovaTech</p>
+            <!-- Délai -->
+            <div class="form-group">
+              <label>Délai de Démarrage Souhaité *</label>
+              <div class="radio-group">
+                <div class="form-check">
+                  <input type="radio" id="delai1" name="delai" value="urgent" />
+                  <label for="delai1">Urgent (moins d'1 mois)</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="delai2" name="delai" value="3mois" />
+                  <label for="delai2">Dans 1 à 3 mois</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="delai3" name="delai" value="6mois" checked />
+                  <label for="delai3">Dans 3 à 6 mois</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="delai4" name="delai" value="flexible" />
+                  <label for="delai4">Flexible / À définir</label>
+                </div>
+              </div>
+            </div>
 
-  <p>
-    <a href="../index.html">Accueil</a> |
-    <a href="about.html">À propos</a> |
-    <a href="services.html">Services</a> |
-    <a href="contact.html">Contact</a>
-  </p>
+            <!-- Superficie -->
+            <div class="form-group">
+              <label for="superficie">Superficie Approximative (m²)</label>
+              <input
+                type="number"
+                id="superficie"
+                name="superficie"
+                placeholder="Ex : 150"
+                min="1"
+                max="100000"
+              />
+            </div>
 
-  <p>Mentions légales</p>
-</footer>
+            <!-- Date de contact souhaitée -->
+            <div class="form-group">
+              <label for="date-rdv">Date de RDV Souhaitée</label>
+              <input
+                type="date"
+                id="date-rdv"
+                name="date_rdv"
+              />
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">Décrivez Votre Projet *</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Décrivez votre projet, vos attentes, vos contraintes spécifiques..."
+                required
+                minlength="20"
+              ></textarea>
+            </div>
+
+            <!-- Comment avez-vous connu NovaBuild ? -->
+            <div class="form-group">
+              <label>Comment avez-vous connu NovaBuild ?</label>
+              <div class="checkbox-group">
+                <div class="form-check">
+                  <input type="checkbox" id="source-reseaux" name="source[]" value="reseaux-sociaux" />
+                  <label for="source-reseaux">Réseaux sociaux</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="source-bouche" name="source[]" value="bouche-oreille" />
+                  <label for="source-bouche">Bouche-à-oreille</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="source-google" name="source[]" value="google" />
+                  <label for="source-google">Google / Web</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="source-presse" name="source[]" value="presse" />
+                  <label for="source-presse">Presse / Magazine</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="source-autre" name="source[]" value="autre" />
+                  <label for="source-autre">Autre</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Acceptation RGPD -->
+            <div class="form-check mb-2">
+              <input type="checkbox" id="rgpd" name="rgpd" required />
+              <label for="rgpd">
+                J'accepte que mes données soient utilisées pour traiter ma demande conformément à la
+                <a href="#">politique de confidentialité</a> de NovaBuild. *
+              </label>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="form-check mb-3">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter">
+                Je souhaite recevoir la newsletter NovaBuild (actualités, projets, tendances).
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              Envoyer Ma Demande
+            </button>
+
+          </form>
+        </div>
+
+        <!-- INFOS CONTACT -->
+        <div>
+          <div class="contact-info-card">
+            <h3>Nos Coordonnées</h3>
+
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <div class="info-text">
+                <strong>Adresse</strong>
+                <span>123, Boulevard Zerktouni<br>20000 Casablanca, Maroc</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon">📞</span>
+              <div class="info-text">
+                <strong>Téléphone</strong>
+                <span>+212 522 456 789<br>+212 661 234 567 (Mobile)</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon">✉️</span>
+              <div class="info-text">
+                <strong>Email</strong>
+                <span>contact@novabuild.ma<br>projets@novabuild.ma</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon">🕐</span>
+              <div class="info-text">
+                <strong>Horaires d'Ouverture</strong>
+                <span>
+                  Lundi – Vendredi : 9h00 – 18h00<br>
+                  Samedi : 9h00 – 13h00<br>
+                  Dimanche : Fermé
+                </span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon">🌐</span>
+              <div class="info-text">
+                <strong>Réseaux Sociaux</strong>
+                <span>
+                  Instagram : @novabuild.ma<br>
+                  LinkedIn : NovaBuild SARL<br>
+                  Facebook : /novabuildcasablanca
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ rapide -->
+          <div style="margin-top:25px;">
+            <h3 style="margin-bottom:15px;">Questions Fréquentes</h3>
+
+            <details>
+              <summary>Le devis est-il payant ?</summary>
+              <div class="details-content">
+                <p>Non, le premier devis est entièrement gratuit et sans engagement. Nous vous rencontrons pour comprendre votre projet avant de vous soumettre une proposition tarifaire détaillée.</p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Intervenez-vous en dehors de Casablanca ?</summary>
+              <div class="details-content">
+                <p>Oui ! NovaBuild intervient dans tout le Maroc (Rabat, Marrakech, Agadir, Tanger...) et en Afrique de l'Ouest pour des projets d'envergure. Des frais de déplacement peuvent s'appliquer.</p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Combien de temps dure un projet type ?</summary>
+              <div class="details-content">
+                <p>Cela dépend de la nature et de la taille du projet. Une rénovation partielle peut prendre 2 à 6 semaines, tandis qu'un projet architectural complet nécessite en moyenne 6 à 18 mois, de la conception à la livraison.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTE -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nous Trouver</h2>
+        <p>Nos bureaux sont situés au cœur de Casablanca, facilement accessibles.</p>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53303.77867767003!2d-7.661483!3d33.589886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d282b0b7d423%3A0xe2d2d5bc09c3df6b!2sCasablanca!5e0!3m2!1sfr!2sma!4v1680000000000!5m2!1sfr!2sma"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation NovaBuild – Casablanca"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">Nova<span>Build</span></a>
+          <p>Leader de l'architecture et du design d'intérieur au Maroc depuis 2010.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">li</a>
+            <a href="#" class="social-link">yt</a>
+          </div>
+        </div>
+        <div>
+          <h4>Plan du Site</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Architecture</a></li>
+            <li><a href="services.html">Design d'Intérieur</a></li>
+            <li><a href="services.html">Rénovation</a></li>
+            <li><a href="services.html">Paysagisme</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Mentions Légales</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mentions Légales</a></li>
+            <li><a href="#">Politique de Confidentialité</a></li>
+            <li><a href="#">CGV</a></li>
+            <li><a href="#">Plan du Site</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NovaBuild SARL – RC 123456 – ICE 001234567890123 |
+        <a href="#">Mentions Légales</a> |
+        <a href="#">Politique de Confidentialité</a>
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
