@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP2 - Formulaire</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Aller au contenu</a>
+
+<header>
+  <h1>Formulaire d'inscription</h1>
+</header>
+
+<main id="main">
+
+<form>
+
+  <!-- INFOS -->
+  <fieldset>
+    <legend>Informations personnelles</legend>
+
+    <label>Nom :
+      <input type="text" required autocomplete="family-name">
+    </label>
+
+    <label>Prénom :
+      <input type="text" required autocomplete="given-name">
+    </label>
+
+    <label>Email :
+      <input type="email" required autocomplete="email">
+    </label>
+
+    <label>Téléphone :
+      <input type="tel" required pattern="^0[1-9][0-9]{8}$"
+             placeholder="0612345678">
+    </label>
+
+    <label>Date de naissance :
+      <input type="date" required max="2008-01-01">
+    </label>
+
+  </fieldset>
+
+  <!-- PASSWORD -->
+  <fieldset>
+    <legend>Mot de passe</legend>
+
+    <label>Mot de passe :
+      <input type="password" required
+             pattern="^(?=.*[A-Z])(?=.*[0-9]).{8,}$"
+             title="8 caractères minimum, 1 majuscule, 1 chiffre">
+    </label>
+
+    <label>Confirmer mot de passe :
+      <input type="password" required>
+    </label>
+
+  </fieldset>
+
+  <!-- AUTRES -->
+  <fieldset>
+    <legend>Informations complémentaires</legend>
+
+    <label>Pays :
+      <input list="pays" required>
+      <datalist id="pays">
+        <option value="Maroc">
+        <option value="France">
+        <option value="Canada">
+      </datalist>
+    </label>
+
+    <p>Genre :</p>
+    <label><input type="radio" name="genre" required> Homme</label>
+    <label><input type="radio" name="genre"> Femme</label>
+
+    <p>Centres d'intérêt :</p>
+    <label><input type="checkbox"> Sport</label>
+    <label><input type="checkbox"> Musique</label>
+    <label><input type="checkbox"> Informatique</label>
+
+    <label>Biographie :
+      <textarea maxlength="200"></textarea>
+    </label>
+
+    <label>Photo de profil :
+      <input type="file" accept="image/*">
+    </label>
+
+  </fieldset>
+
+  <!-- CGU -->
+  <label>
+    <input type="checkbox" required>
+    J'accepte les conditions générales
+  </label>
+
+  <button type="submit">S'inscrire</button>
+
+</form>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 - TP2</p>
+</footer>
+
+</body>
+</html>
