@@ -74,3 +74,36 @@ footer {
 .skip-link:focus {
   top: 0;
 }
+
+/*pour le tp2 */
+
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px;
+  background: #0ea5e9;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
