@@ -24,14 +24,33 @@
   <h2>Galerie</h2>
 
   <div class="cards">
-    <img src="../images/img1.jpg">
-    <img src="../images/img2.webp">
-    <img src="../images/img3.jpg">
+<picture>
+  <source media="(max-width:600px)" srcset="../images/img1-small.jpg">
+  <img src="../images/img1.jpg" alt="Projet">
+</picture>
+<picture>
+  <source media="(max-width:600px)" srcset="../images/img2-small.webp">
+  <img src="../images/img2.webp" alt="Projet">
+</picture>
+
+    <picture>
+      <source media="(max-width:600px)" srcset="../images/img3-small.jpg">
+      <img src="../images/img3.jpg" alt="Projet">
+    </picture>
   </div>
 </section>
 
 <footer>
-<p>© 2026</p>
+  <p>© 2026 NovaTech</p>
+
+  <p>
+    <a href="../index.html">Accueil</a> |
+    <a href="about.html">À propos</a> |
+    <a href="services.html">Services</a> |
+    <a href="contact.html">Contact</a>
+  </p>
+
+  <p>Mentions légales</p>
 </footer>
 
 </body>
